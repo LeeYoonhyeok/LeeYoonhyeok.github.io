@@ -4,43 +4,52 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
+    display: flex;
+    height: 100vh;
 }
 
-header {
-    background: #333;
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    padding: 15px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-nav ul {
+.sidebar nav ul {
     list-style: none;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+.sidebar nav ul li {
+    margin: 20px 0;
 }
 
-nav ul li a {
+.sidebar nav ul li a {
     color: #fff;
     text-decoration: none;
+    display: block;
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    width: calc(100% - 220px);
 }
 
 section {
-    padding: 20px;
-    margin: 10px 0;
-}
-
-section h2 {
-    margin-bottom: 10px;
-    color: #333;
+    margin-bottom: 50px;
 }
 
 footer {
