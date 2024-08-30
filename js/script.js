@@ -1,6 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
+    const sidebar = document.querySelector('.sidebar');
+    const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelectorAll('.sidebar nav ul li a');
+
+    // 햄버거 메뉴 클릭 시 사이드바 토글
+    hamburger.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+    });
+
+    // 사이드바의 링크 클릭 시 사이드바 닫기
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            sidebar.classList.remove('active');
+        });
+    });
 
     // 스크롤 이벤트 리스너 추가
     window.addEventListener('scroll', function() {
@@ -37,17 +50,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-
-     // 햄버거 메뉴 클릭 시 사이드바 토글
-     hamburger.addEventListener('click', function() {
-        sidebar.classList.toggle('active');
-    });
-
-    // 사이드바의 링크 클릭 시 사이드바 닫기
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            sidebar.classList.remove('active');
-        });
-    });
-    
 });
