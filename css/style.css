@@ -24,7 +24,7 @@ body {
 }
 
 .sidebar {
-    width: 220px;
+    width: 260px 60px;
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -103,7 +103,6 @@ section h3 {
 }
 
 section p, section ul {
-    margin-bottom: 10px;
     text-align: left;
     color: #000; /* 본문 텍스트 색상을 검정색으로 설정 */
 }
