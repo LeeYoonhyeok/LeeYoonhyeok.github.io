@@ -1,3 +1,4 @@
+/* 기본 스타일 */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -14,22 +15,14 @@ body {
 }
 
 .sidebar {
-    width: 200px;
+    width: 220px;
     background-color: #333;
     color: #fff;
-    padding: 15px;
+    padding: 20px;
     position: fixed;
     height: 100%;
     overflow-y: auto;
-}
-
-.sidebar nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar nav ul li {
-    margin: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .profile-pic {
@@ -38,32 +31,60 @@ body {
 }
 
 .profile-pic img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
 }
 
 .sidebar nav ul li a {
     color: #fff;
     text-decoration: none;
-    display: block;
     padding: 10px;
+    display: block;
     transition: background-color 0.3s ease;
+    border-radius: 4px;
 }
 
-.sidebar nav ul li a.active, .sidebar nav ul li a:hover {
-    background-color: #555; /* 선택되었을 때 색상 */
+.sidebar nav ul li a:hover, .sidebar nav ul li a.active {
+    background-color: #555;
 }
 
 .content {
-    margin-left: 220px;
+    margin-left: 240px;
     padding: 20px;
-    width: calc(100% - 220px);
+    width: calc(100% - 240px);
 }
 
-section {
-    margin-bottom: 50px;
+header h1 {
+    margin-top: 0;
+    font-size: 32px;
+    color: #333;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+section h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+section p, section ul {
+    margin-bottom: 20px;
 }
 
 footer {
@@ -72,4 +93,8 @@ footer {
     background: #f4f4f4;
     color: #333;
     margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 240px);
+    margin-left: 240px;
 }
