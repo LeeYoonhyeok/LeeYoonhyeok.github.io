@@ -95,17 +95,42 @@ section p, section ul {
     text-align: center; /* 중앙 정렬 */
 }
 
+/* 반응형 웹 설정 */
 @media screen and (max-width: 768px) {
     .sidebar {
         position: static;
         width: 100%;
         height: auto;
         box-shadow: none;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .sidebar nav ul li {
+        margin: 0;
     }
 
     .content {
         width: 100%;
         padding: 20px;
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        display: none; /* 480px 이하에서는 사이드바를 숨김 */
+    }
+
+    .content {
+        padding: 20px;
     }
 }
