@@ -5,13 +5,16 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    display: flex;
-    height: 100vh;
 }
 
 .container {
     display: flex;
     width: 100%;
+}
+
+.content {
+    width: calc(100% - 240px);
+    padding: 20px;
 }
 
 .sidebar {
@@ -20,9 +23,11 @@ body {
     color: #fff;
     padding: 20px;
     position: fixed;
+    right: 0;
+    top: 0;
     height: 100%;
     overflow-y: auto;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .profile-pic {
@@ -55,14 +60,9 @@ body {
     border-radius: 4px;
 }
 
-.sidebar nav ul li a:hover, .sidebar nav ul li a.active {
-    background-color: #555;
-}
-
-.content {
-    margin-left: 240px;
-    padding: 20px;
-    width: calc(100% - 240px);
+.sidebar nav ul li a.active, .sidebar nav ul li a:hover {
+    background-color: #fff;
+    color: #333;
 }
 
 header h1 {
@@ -92,9 +92,8 @@ footer {
     padding: 20px;
     background: #f4f4f4;
     color: #333;
-    margin-top: 20px;
     position: fixed;
     bottom: 0;
     width: calc(100% - 240px);
-    margin-left: 240px;
+    margin-left: 0;
 }
