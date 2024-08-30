@@ -34,7 +34,7 @@ body {
     position: fixed;
     right: 0;
     top: 0;
-    transform: translateX(100%); /* 처음에 화면 밖으로 이동 */
+    transform: translateX(0); /* 기본적으로 화면에 고정 */
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
 }
@@ -135,7 +135,11 @@ section p, section ul {
     .sidebar {
         width: 220px;
         height: 100vh;
-        transform: translateX(100%); /* 처음에 화면 밖으로 이동 */
+        transform: translateX(100%); /* 처음에는 화면 밖으로 이동 */
+    }
+
+    .sidebar.active {
+        transform: translateX(0); /* 작은 화면에서 햄버거 메뉴로 사이드바를 열 때 */
     }
 
     .content {
@@ -148,9 +152,14 @@ section p, section ul {
     }
 }
 
-@media screen and (max-width: 480px) {
-    .content {
-        padding: 20px;
+@media screen and (min-width: 769px) {
+    .sidebar {
+        transform: translateX(0); /* 큰 화면에서는 항상 사이드바가 보이도록 설정 */
+        position: fixed;
+    }
+
+    .hamburger {
+        display: none; /* 큰 화면에서는 햄버거 메뉴 숨김 */
     }
 }
 
