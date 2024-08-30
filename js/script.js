@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.querySelector('.sidebar');
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelectorAll('.sidebar nav ul li a');
+    const sections = document.querySelectorAll('section');
 
     // 햄버거 메뉴 클릭 시 사이드바 토글
     hamburger.addEventListener('click', function() {
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
 
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
                 current = section.getAttribute('id');
             }
         });
