@@ -11,7 +11,6 @@ body {
 
 .container {
     display: flex;
-    flex-wrap: nowrap;
     width: 100%;
     min-height: 100vh; /* 화면 전체 높이 */
 }
@@ -76,14 +75,14 @@ header h1 {
     margin-top: 0;
     font-size: 32px;
     color: #333;
-    text-align: center; /* 중앙 정렬 */
+    text-align: center;
 }
 
 section h2 {
     font-size: 28px;
     margin-bottom: 10px;
     color: #333;
-    text-align: center; /* 중앙 정렬 */
+    text-align: left; /* 왼쪽 정렬 */
 }
 
 section h3 {
@@ -94,7 +93,7 @@ section h3 {
 
 section p, section ul {
     margin-bottom: 20px;
-    text-align: center; /* 중앙 정렬 */
+    text-align: left; /* 왼쪽 정렬 */
 }
 
 /* 반응형 웹 설정 */
@@ -106,17 +105,19 @@ section p, section ul {
     .sidebar {
         width: 100%;
         height: auto;
-        position: static; /* 스크롤과 상관없이 상단에 위치 */
+        position: fixed; /* 화면 상단에 고정 */
+        top: 0;
         box-shadow: none;
         display: flex;
         justify-content: space-around;
         padding: 10px 0;
+        z-index: 1000; /* 본문 위로 사이드바가 겹치지 않도록 설정 */
     }
 
     .content {
         width: 100%;
         padding: 20px;
-        margin: 0;
+        margin-top: 60px; /* 사이드바가 화면 상단에 있을 때 본문이 가리지 않도록 여백 추가 */
     }
 }
 
