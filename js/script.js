@@ -13,11 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             sidebar.classList.remove('active');
-            
-            // 모든 링크에서 active 클래스 제거
-            navLinks.forEach(link => link.classList.remove('active'));
-            // 클릭된 링크에 active 클래스 추가
-            this.classList.add('active');
         });
     });
 
@@ -39,6 +34,33 @@ document.addEventListener('DOMContentLoaded', function() {
             if (link.getAttribute('href').substring(1) === current) {
                 link.classList.add('active');
             }
+        });
+
+        // 마지막 섹션에 도달했을 때, 해당 섹션의 링크 활성화
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            navLinks[navLinks.length - 1].classList.add('active'); // 마지막 링크 활성화
+        }
+    });
+
+    // 클릭 시 부드럽게 스크롤
+    navLinks.forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            window.scrollTo({
+                top: targetElement.offsetTop - 20, // 20px의 여유 공간을 둠
+                behavior: 'smooth'
+            });
+
+            // 수동으로 active 상태 설정
+            navLinks.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
         });
     });
 });
