@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             sidebar.classList.remove('active');
+            
+            // 모든 링크에서 active 클래스 제거
+            navLinks.forEach(link => link.classList.remove('active'));
+            // 클릭된 링크에 active 클래스 추가
+            this.classList.add('active');
         });
     });
 
@@ -34,21 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (link.getAttribute('href').substring(1) === current) {
                 link.classList.add('active');
             }
-        });
-    });
-
-    // 클릭 시 부드럽게 스크롤
-    navLinks.forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            window.scrollTo({
-                top: targetElement.offsetTop - 20, // 20px의 여유 공간을 둠
-                behavior: 'smooth'
-            });
         });
     });
 });
