@@ -9,10 +9,26 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.classList.toggle('active');
     });
 
-    // 사이드바의 링크 클릭 시 사이드바 닫기
+    // 사이드바의 링크 클릭 시 사이드바 닫기 및 해당 항목 활성화
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
             sidebar.classList.remove('active');
+
+            // 모든 링크에서 active 클래스 제거
+            navLinks.forEach(link => link.classList.remove('active'));
+            // 클릭된 링크에 active 클래스 추가
+            this.classList.add('active');
+
+            // 클릭 시 부드럽게 스크롤
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            window.scrollTo({
+                top: targetElement.offsetTop - 20, // 20px의 여유 공간을 둠
+                behavior: 'smooth'
+            });
         });
     });
 
@@ -24,43 +40,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
 
-            if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+            // 스크롤 위치가 섹션의 중앙 부분에 도달했을 때 해당 섹션을 현재 섹션으로 설정
+            if (window.pageYOffset >= sectionTop - window.innerHeight / 2 &&
+                window.pageYOffset < sectionTop + sectionHeight - window.innerHeight / 2) {
                 current = section.getAttribute('id');
             }
         });
 
+        // 현재 섹션에 맞는 링크를 active 상태로 변경
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href').substring(1) === current) {
                 link.classList.add('active');
             }
-        });
-
-        // 마지막 섹션에 도달했을 때, 해당 섹션의 링크 활성화
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-            });
-            navLinks[navLinks.length - 1].classList.add('active'); // 마지막 링크 활성화
-        }
-    });
-
-    // 클릭 시 부드럽게 스크롤
-    navLinks.forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            window.scrollTo({
-                top: targetElement.offsetTop - 20, // 20px의 여유 공간을 둠
-                behavior: 'smooth'
-            });
-
-            // 수동으로 active 상태 설정
-            navLinks.forEach(link => link.classList.remove('active'));
-            this.classList.add('active');
         });
     });
 });
