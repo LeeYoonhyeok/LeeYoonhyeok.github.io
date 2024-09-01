@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionHeight = section.clientHeight;
 
             // 스크롤 위치가 섹션의 중앙 부분에 도달했을 때 해당 섹션을 현재 섹션으로 설정
-            if (window.pageYOffset >= sectionTop - window.innerHeight / 2 &&
-                window.pageYOffset < sectionTop + sectionHeight - window.innerHeight / 2) {
+            if (window.pageYOffset >= sectionTop - window.innerHeight / 2.5 &&
+                window.pageYOffset < sectionTop + sectionHeight - window.innerHeight / 2.5) {
                 current = section.getAttribute('id');
             }
         });
