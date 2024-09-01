@@ -24,6 +24,7 @@ body {
     border-radius: 15px; /* 둥근 모서리 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
     margin-bottom: 40px; /* 하단 여백 추가 */
+    z-index: 10; /* z-index로 보장 */
 }
 
 .sidebar {
