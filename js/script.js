@@ -56,3 +56,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+function calculateExperience(startDate) {
+    const start = new Date(startDate);
+    const now = new Date();
+    
+    let years = now.getFullYear() - start.getFullYear();
+    let months = now.getMonth() - start.getMonth();
+
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+    
+    return `${years}년 ${months}개월`;
+  }
+
+  document.getElementById('experience').innerText = calculateExperience('2025-02-17');
