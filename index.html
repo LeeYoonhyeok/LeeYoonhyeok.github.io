@@ -1,282 +1,572 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이윤혁 포트폴리오</title>
+    <meta name="theme-color" content="#F9F9F8">
+    <meta name="description" content="이윤혁의 데이터 엔지니어·데이터 사이언티스트 포트폴리오. 데이터 분석, 머신러닝·시계열 예측, 파이프라인 구축, 웹 서비스 개발 경험을 소개합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="이윤혁 — Data Engineering & Data Science">
+    <meta property="og:description" content="데이터를 분석하고 활용하는 일에 관심이 있습니다. 데이터 엔지니어링, 예측 모델링, 서비스 개발 경험을 정리했습니다.">
+    <title>이윤혁 | Data Engineering & Data Science Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <div class="profile-pic">
-                <img src="myphoto.jpg" alt="Profile Picture">
-                <h3>이윤혁</h3>
-                <p>데이터 엔지니어</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#introduction">Introduction</a></li>
-                    <li><a href="#skillset">Skills</a></li>
-                    <li><a href="#career">Career</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#educations">Educations</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+    <a class="skip-link" href="#main">본문으로 바로가기</a>
+
+    <header class="site-header" id="top">
+        <div class="page-container header-inner">
+            <a class="wordmark" href="#top" aria-label="이윤혁 포트폴리오 홈">
+                LEE YOONHYEOK<span class="wordmark-period">.</span>
+            </a>
+
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-label="메뉴 열기"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="primary-navigation" aria-label="주 메뉴">
+                <a href="#work">Work <span>01</span></a>
+                <a href="#about">About <span>02</span></a>
+                <a href="#contact">Contact <span>03</span></a>
             </nav>
-        </aside>
-
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
         </div>
+    </header>
 
-        <div class="content">
-            <section id="introduction">
-                <h1>Introduction</h1>
-                <h2>안녕하세요. 데이터 엔지니어 이윤혁입니다.</h2>
-                <br>                
-                <ul>
-                    <li>데이터 분석과 머신러닝 예측 모델 구축 및 웹 개발 경험이 있습니다. 데이터를 기반으로
-                        모델을 생성하는 과정에 깊은 흥미를 느끼며, 실무 중심의 프로젝트를 통해 풍부한 경험을 쌓아왔습니다.</li>
-                    <li>개발 과정에서 '화합'을 중요시하며, 팀 내 긍정적인 협력을 이끌어내는 데 강점을 가지고 있습니다.</li>
-                    <li>"디버깅 맨"이라는 별명을 얻은 적이 있습니다. 저는 맡은 역할에 대해 끝까지 책임지
-                    고, 문제가 해결될 때까지 포기하지 않는다는 신념을 가지고 있습니다.</li>
-                    <li>꾸준한 도전과 책임감을 중요하게 생각하며, 새로운 기술과 지식을 배우는 것을 즐깁니다.</li>
-                </ul>
-            </section>
+    <main id="main">
+        <!-- HERO: 지원자의 관심사와 실무·분석 경험을 한 화면에서 전달 -->
+        <section class="hero page-container" aria-labelledby="hero-heading">
+            <div class="hero-topline">
+                <p class="eyebrow"><span class="eyebrow-line"></span> PORTFOLIO / 2026</p>
+                <p class="mono hero-location">DATA ENGINEERING · DATA SCIENCE</p>
+            </div>
 
-            <hr>
-
-            <section id="skillset">
-                <h1>Skills</h1>
-                <h2>■ Strong</h2>
-                <ul>
-                    <li>Python</li>
-                    <li>Machine Learning</li>                    
-                    <li>My SQL</li>
-                    <li>Linux</li>
-                    <li>Elastic Stack</li>
-                </ul>
-
-                <h2>■ knowledgeable</h2>
-                <ul>                    
-                    <li>Deep Learning</li>
-                    <li>LLM</li>
-                    <li>Django</li>                                                         
-                </ul>
-
-                <h2>■ ETC/Learning</h2>
-                <ul>
-                    <li>Java</li>
-                    <li>Spring</li>
-                    <li>Git</li>
-                    <li>AWS</li>
-                    <li>Docker</li>
-                    <li>Airflow</li>
-                    <li>Redis</li>
-                    <li>FastAPI</li>
-                </ul>
-            </section>
-
-            <hr>
-
-            <section id="career">
-                <h1>Career</h1>
-                <h2>■ 로이드케이</h2>
-                <p id="date_font">2025.02 ~ 현재 (<span id="experience"></span>) | <strong>데이터 엔지니어</strong> | 매니저(사원)</p>
-                <br>
-                <p>[기술스택]</p>
-                <p>Elasticsearch, Logstash, Kibana, Linux</p>
-                <br>
-                <p>[주요업무]</p>
-                <ul>
-                    <li>데이터 파이프 라인 구축 및 검색 엔진 개발</li>
-                    <li>데이터 및 시스템 로그 대시보드 설계</li>
-                    <li>색인 관련 산출물 및 정리 문서 작업</li>
-                </ul>
-                <br>
-                <p>[주요성과]</p>
-                <ul>
-                    <li>데이터 무결성 고려한 파이프 라인 구축</li>
-                    <li>자동화 스크립트 기반 실시간 데이터 반영 및 쿼리 최적화</li>
-                </ul>
-
-                <br><br>
-
-                <h2>■ 모아플래닛</h2>
-                <p id="date_font">2020.07 ~ 2020.08 (2개월) | <strong>웹 개발자</strong> | 현장실습(인턴)</p>
-                <br>
-                <p>[기술스택]</p>
-                <p>Spring, CSS, JavaScript, Git</p>
-                <br>
-                <p>[주요업무]</p>
-                <ul>
-                    <li>고객사의 요청 디자인 및 기능 반영한 웹페이지 구현</li>
-                    <li>고객사 디자인 가이드라인 및 기술적 요구사항 분석</li>
-                    <li>IT 개발 문서 작성</li>
-                </ul>
-                <br>
-                <p>[주요성과]</p>
-                <ul>
-                    <li>고객사의 요구사항을 정확히 반영한 웹페이지 구현으로 높은 만족도 획득</li>
-                    <li>GitHub를 통한 효율적인 협업과 일정 준수</li>
-                    <li>효율적 협업과 소통, 체계적 개발 문서 작성의 중요성을 배움</li>
-                </ul>
-            </section>
-
-            <hr>
-
-            <section id="projects">
-                <h1>Projects</h1>
-                
-                <h2>■ 인천공항 협업포털 전면 개편</h2>
-                <p id="date_font">2025.02 ~ 2026.05 (1년 3개월) | 팀프로젝트(3명)</p>
-                <p>인천공항 직원들을 위한 게시판 검색 엔진 구축 프로젝트</p>
-                <br>
-                <p>[기술 스택]</p>
-                <p>Linux, ElasticSearch, Logstash, Kibana</p>
-                <ul> 
-                    <li>공항 운영 및 로그 데이터를 수집하여 Elasticsearch에 실시간 색인 및 안정적 저장</li> 
-                    <li>Logstash 기반의 데이터 전처리 파이프라인 구축으로 이기종 데이터 통합 관리</li> 
-                    <li>Kibana를 활용한 목적별 대시보드 설계 및 실시간 검색 데이터 모니터링(관리자용) 구축</li>                     
-                    <li>Elastic Stack 최적화를 통해 대용량 운영 데이터의 빠른 검색 및 조회 성능 확보</li>
-                    <li>시각화 데이터를 기반으로 공항 운영 패턴 탐색 및 의사결정 인사이트 도출</li>
-                </ul>
-                    <div class="project-buttons">
-                    <a href="[github pdf] 인천공항 프로젝트.pdf" class="btn detail-btn" target="_blank">
-                        <div class="btn-box">
-                            <span>상세보기</span>
-                        </div>
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <p class="hero-kicker">이윤혁 <span class="hero-kicker-divider">/</span> Data Engineer &amp; Data Science</p>
+                    <h1 id="hero-heading">
+                        데이터를 분석하고,<br>
+                        의미를 찾아<br>
+                        <em>서비스에 연결합니다.</em>
+                    </h1>
+                    <p class="hero-description">
+                        데이터에서 패턴과 문제의 원인을 찾아가는 과정에 흥미가 있습니다.
+                        Python·SQL을 활용한 데이터 분석부터 예측 모델링, 데이터 파이프라인과
+                        웹 서비스 구현까지 경험을 쌓아왔습니다.
+                    </p>
+                    <a class="text-arrow hero-link" href="#work">
+                        프로젝트 자세히 보기
+                        <span aria-hidden="true">↘</span>
                     </a>
                 </div>
 
-                <br><br>
+                <aside class="profile-brief" aria-labelledby="profile-title">
+                    
 
-                <h2>■ 식품사막 해결을 위한 AI 웹 서비스 구축</h2>
-                <p id="date_font">2024.06 ~ 2024.07 (2개월) | KT Aivle School 교육기관 프로젝트 | 팀프로젝트(8명)</p>
-                <p>KT Aivle School에서 진행된 아이디어 선정부터 배포까지의 과정의 빅프로젝트로, B2B 또는 B2C 방향의 프로젝트</p>
-                <br>
-                <p>[기술 스택]</p>
-                <p>HTML, CSS, JavaScript, Python, Machine Learning, LLM, MySQL, AWS</p>
-                <ul>
-                    <li>Django 프레임워크를 활용한 웹 서비스 구축</li>
-                    <li>'식품사막'을 해결하기 위한 솔루션으로 B2C 방향의 사업 프로젝트</li>
-                    <li>신선식품의 가격을 API로 호출하여 시계열 분석으로 일주일 후 가격 예측 모델 생성</li>
-                    <li>'AI허브'에서 개발된 파킨슨 진단 모델을 활용하여 웹 서비스에 적용</li>
-                    <li>'gpt3.5'모델로 RAG 기술을 활용해 챗봇 개발 후 웹 서비스에 적용</li>
-                    <li>AWS (EC2, S3, Celery, Radis 등)을 이용하여 배포</li>
-                </ul>
-                <div class="project-buttons">
-                    <a href="https://github.com/LeeYoonhyeok/ONSEMI" class="btn github-btn" target="_blank">
-                        <div class="btn-box">
-                            <span>GitHub 코드 보기</span>
-                        </div>
-                    </a>
-                    <a href="[github pdf] kt-aivle school.pdf" class="btn detail-btn" target="_blank">
-                        <div class="btn-box">
-                            <span>상세보기</span>
-                        </div>
-                    </a>
+                <div class="brief-heading">
+                    <div class="brief-heading-text">
+                        <span class="mono overline">PROFILE / SUMMARY</span>
+
+                        <h2 id="profile-title">이윤혁</h2>
+
+                        <p class="brief-role">
+                            Data Engineer <span>/</span> Data Scientist
+                        </p>
+
+                        <p class="brief-intro">
+                            실무에서는 데이터 수집·운영을,
+                            프로젝트에서는 분석·모델링과
+                            서비스 개발을 경험했습니다.
+                        </p>
+                    </div>
+
+                    <img
+                        class="brief-photo"
+                        src="images/profile.jpg"
+                        alt="이윤혁 프로필 사진"
+                        width="160"
+                        height="220"
+                    >
                 </div>
 
-                <br><br>
 
-                <h2>■ 축산 데이터 분석 및 모델 구축</h2>
-                <p id="date_font">2022.10 ~ 2022.11 (2개월) | 축산물품질평가원 주관 공모전 | 팀프로젝트(3명)</p>
-                <p>축산데이터를 활용한 축산 현황분석 및 정책 의사결정 모델 발굴</p>
-                <br>
-                <p>[기술 스택]</p>
-                <p>Python, Machine Learning</p>
-                <ul>
-                    <li>축산물 유통거래량 외 기타 5건 데이터 수집, 전처리, 데이터 분석 수행</li>
-                    <li>유통거래량, 가격변동 등 시계열 분석 진행 후 가격 예측 모델 생성</li>
-                    <li>국내산 고기에 대한 고객 인식 데이터로 군집 분석 진행</li>
-                </ul>
-                
-                <div class="project-buttons">
-                    <a href="https://github.com/LeeYoonhyeok/umelona" class="btn github-btn" target="_blank">
-                        <div class="btn-box">
-                            <span>GitHub 코드 보기</span>
+                    <p class="brief-intro">
+                        실무에서는 데이터 수집·운영을, 프로젝트에서는 분석·모델링과
+                        서비스 개발을 경험했습니다.
+                    </p>
+
+                    <dl class="profile-meta">
+                        <div>
+                            <dt>현재</dt>
+                            <dd>로이드케이 · 데이터 엔지니어</dd>
                         </div>
-                    </a>
-                    <a href="[github pdf] 축산물 공모전.pdf" class="btn detail-btn" target="_blank">
-                        <div class="btn-box">
-                            <span>상세보기</span>
+                        <div>
+                            <dt>경력</dt>
+                            <dd>
+                                <span id="experience-total">-</span> (인턴 포함)
+                            </dd>
                         </div>
+                        <div>
+                            <dt>전공</dt>
+                            <dd>컴퓨터공학 · 응용통계</dd>
+                        </div>
+                        <div>
+                            <dt>관심</dt>
+                            <dd>데이터 분석 · 예측 모델링 · 데이터 활용</dd>
+                        </div>
+                        <div>
+                            <dt>주요 역량</dt>
+                            <dd>Python · SQL · Machine Learning · Data Pipeline</dd>
+                        </div>
+                    </dl>
+                    <a class="brief-link" href="https://github.com/LeeYoonhyeok" target="_blank" rel="noopener noreferrer">
+                        GitHub ↗
                     </a>
+                </aside>
+            </div>
+
+            <!-- 첫 화면에서 프로젝트 제목과 핵심 내용을 바로 파악할 수 있는 인덱스 -->
+            <div class="work-index" aria-labelledby="work-index-heading">
+                <div class="work-index-heading">
+                    <span class="mono overline">SELECTED WORKS / INDEX</span>
+                    <h2 id="work-index-heading">주요 프로젝트 <span>04</span></h2>
+                    <p>데이터를 수집하고 분석해 실제 기능과 운영 환경에 적용한 경험입니다.</p>
                 </div>
-                
-            </section>
-            <br>
-            <hr>
 
-            <section id="educations">
-                <h1>Educations</h1>
+                <ol class="work-index-list">
+                    <li>
+                        <a href="#work-title-01">
+                            <span class="work-index-number">01</span>
+                            <span class="work-index-name">인천공항 협업포털 검색 시스템</span>
+                            <span class="work-index-outcome">데이터 누락 개선 · 추천 검색어 자동화</span>
+                            <span class="work-index-arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#work-title-02">
+                            <span class="work-index-number">02</span>
+                            <span class="work-index-name">NH농협은행 로그 모니터링</span>
+                            <span class="work-index-outcome">로그 수집·분석 · 오류 모니터링</span>
+                            <span class="work-index-arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#work-title-03">
+                            <span class="work-index-number">03</span>
+                            <span class="work-index-name">식품사막 해결 AI 웹 서비스</span>
+                            <span class="work-index-outcome">시계열 가격 예측 · 웹 서비스 구현</span>
+                            <span class="work-index-arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#work-title-04">
+                            <span class="work-index-number">04</span>
+                            <span class="work-index-name">축산 데이터 분석 및 예측 모델</span>
+                            <span class="work-index-outcome">가격 예측 · 소비자 유형 군집화</span>
+                            <span class="work-index-arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </section>
 
-                <h2>■ 경기대학교</h2>
-                <p id="date_font">2018.03 ~ 2024.02 | 졸업</p>
-                <p>대학교(학사) | 컴퓨터공학부 전공, 응용통계 복수전공</p>
-                <p>학점 3.76 / 4.5</p>
+        <!-- SELECTED WORKS: 원본 프로젝트 구성도 이미지를 비대칭 그리드에 표시 -->
+        <section class="work-section" id="work" aria-labelledby="work-heading">
+            <div class="page-container">
+                <div class="section-intro section-intro--work">
+                    <div class="section-marker">
+                        <span class="section-index">01 / SELECTED WORKS</span>
+                    </div>
+                    <div class="section-intro-content">
+                        <h2 id="work-heading">Selected Works<span class="title-dot">.</span></h2>
+                        <p>
+                            데이터 분석과 활용, 안정적인 데이터 처리 환경을 만들었던 경험을 정리했습니다.<br>
+                            각 프로젝트에서 맡은 역할과 해결한 문제를 확인할 수 있습니다.
+                        </p>
+                    </div>
+                </div>
 
-                <br>
+                <!-- 01. 인천공항 검색 시스템 / 사용자 제공 구성도 이미지 -->
+                <article class="work-item work-item--primary" aria-labelledby="work-title-01">
+                    <div class="work-aside">
+                        <span class="work-number">01</span>
+                        <p class="work-period">2025.03 — 2026.07</p>
+                        <p class="work-category">DATA PIPELINE<br>DATA UTILIZATION</p>
+                        <h3 id="work-title-01">인천공항 협업포털<br>검색 시스템 구축·고도화</h3>
+                        <p class="work-description">
+                            여러 업무 시스템의 데이터를 수집 · 가공해 검색에 활용할 수 있도록 구성했습니다.
+                            운영 과정에서 발견한 데이터 누락 문제를 해결하고 추천 검색어 생성을 자동화했습니다.
+                        </p>
+                        <dl class="work-facts">
+                            <div><dt>담당</dt><dd>데이터 수집 · 색인 / 검색 고도화</dd></div>
+                            <div><dt>기술</dt><dd>SQL, Logstash, Elasticsearch, Linux</dd></div>
+                            <div><dt>핵심</dt><dd>데이터 파이프라인 / 검색 환경 구축, 누락 데이터 / 추천 검색어 자동 수집</dd></div>
+                        </dl>
+                        <a class="work-link" href="[github pdf] 인천공항 프로젝트.pdf" target="_blank" rel="noopener noreferrer">
+                            프로젝트 상세 자료 <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
 
-                <h2>■ KT Aivle School [AI 개발자 트랙]</h2>
-                <p id="date_font">2024.02 ~ 2024.08 (6개월) | 수료</p>
-                <p>[ 데이터 분석과 AI 기술을 기반으로 한 실무적인 교육 프로그램 ]</p>
-                <p>ㆍPython 프로그래밍 및 데이터 분석 기초 역량 강화, 미니 프로젝트 실습</p>
-                <p>ㆍ머신러닝/딥러닝 알고리즘 이해와 적용, 모델 평가 및 분석 학습, 미니 프로젝트 실습</p>
-                <p>ㆍ웹(Django) 개발 및 AWS 학습, 미니프로젝트 실습</p>
-                <p>ㆍ컴퓨터 비전(YOLO, CNN), LLM 학습, 미니 프로젝트 실습</p>
-                <p>ㆍ2개월간의 빅 프로젝트 실습 (AI를 활용한 웹 서비스 구축 및 배포)</p>
-                <p>- 사용한 기술 스택 : Django, MySQL, LLM, MachinLearning, DeepLearning, AWS, GIT</p>
-                <p>- 역할 : 풀스택 개발, DB 설계, 머신러닝 및 딥러닝 모델 개발, LLM 개발</p>
-                <br>
-                <p>ㆍ기타사항</p>
-                <p>- 2개월간 진행된 코딩 대회 (200문제)에서 총 120문제 해결, 코딩 마스터즈 대회에서 마스터 배지 수상</p>
-                <p>- Python 기반 코딩 테스트 스터디 진행</p>
+                    <div class="work-visual-wrap">
+                        <figure class="system-figure">
+                            <a
+                                class="system-figure__link"
+                                href="images/incheon-airport-system.png"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="인천공항 협업포털 전면개편 시스템 구성도 원본 이미지 보기 (새 탭)"
+                            >
+                                <img
+                                    src="images/incheon-airport-system.png"
+                                    alt="인천공항 협업포털 전면개편 시스템 구성도"
+                                    width="1026"
+                                    height="608"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </a>
+                            <figcaption class="system-figure__caption">
+                                <span>FIG. 1 / SYSTEM ARCHITECTURE</span>
+                                <span>이미지를 누르면 크게 볼 수 있습니다 ↗</span>
+                            </figcaption>
+                        </figure>
+                        <div class="work-result">
+                            <span class="result-label">KEY CONTRIBUTION</span>
+                            <p>데이터 누락의 발생 조건을 확인해 수집 안정성 개선 · 추천 검색어 정기 생성 자동화</p>
+                        </div>
+                    </div>
+                </article>
 
-            </section>
-            <br>
-            <hr>
+                <!-- 02. 농협은행 로그 모니터링 / 생성된 구성도 이미지 -->
+                <article class="work-item work-item--reverse" aria-labelledby="work-title-02">
+                    <div class="work-aside">
+                        <span class="work-number">02</span>
+                        <p class="work-period">2026.09 — PRESENT</p>
+                        <p class="work-category">DATA PROCESSING<br>OPERATIONS ANALYTICS</p>
+                        <h3 id="work-title-02">NH농협은행<br>로그 모니터링 고도화</h3>
+                        <p class="work-description">
+                            OpenStack과 Kubernetes에서 발생하는 시스템·컨테이너 데이터를 수집·정리했습니다.
+                            이를 서비스 상태 분석과 장애 원인 파악에 활용할 수 있도록 모니터링 화면을 구성했습니다.
+                        </p>
+                        <dl class="work-facts">
+                            <div><dt>담당</dt><dd>로그 수집 환경 / 대시보드 구축</dd></div>
+                            <div><dt>기술</dt><dd>Elastic Stack, Linux</dd></div>
+                            <div><dt>핵심</dt><dd>다양한 실행 환경의 로그 통합 및 파싱</dd></div>
+                        </dl>
+                        <p class="project-note">현재 진행 중인 업무로, 세부 인프라 정보는 공개하지 않았습니다.</p>
+                    </div>
 
-            <section id="certifications">
-                <h1>Certifications</h1>
-                <h2 style="display: inline-block; margin-right: 10px;">■ Elastic certified engineer</h2>
-                <p id="date_font" style="display: inline-block; margin: 0;">2025.05</p><br>
+                    <div class="work-visual-wrap">
+                        <figure class="system-figure">
+                            <a
+                                class="system-figure__link"
+                                href="images/nh-log-monitoring-system.png"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="NH농협은행 로그 모니터링 고도화 시스템 구성도 원본 이미지 보기 (새 탭)"
+                            >
+                                <img
+                                    src="images/nh-log-monitoring-system.png"
+                                    alt="NH농협은행 로그 모니터링 고도화 시스템 구성도"
+                                    width="1536"
+                                    height="1024"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </a>
+                            <figcaption class="system-figure__caption">
+                                <span>FIG. 2 / SYSTEM ARCHITECTURE</span>
+                                <span>이미지를 누르면 크게 볼 수 있습니다 ↗</span>
+                            </figcaption>
+                        </figure>
+                        <div class="work-result">
+                            <span class="result-label">KEY CONTRIBUTION</span>
+                            <p>운영 데이터를 서비스별로 정리 · 구동 상태와 오류를 분석하는 대시보드 구현</p>
+                        </div>
+                    </div>
+                </article>
 
-                <h2 style="display: inline-block; margin-right: 10px;">■ 정보처리기사</h2>
-                <p id="date_font" style="display: inline-block; margin: 0;">2022.06</p><br>
-                
-                <h2 style="display: inline-block; margin-right: 10px;">■ 빅데이터 분석기사</h2>
-                <p id="date_font" style="display: inline-block; margin: 0;">2022.12</p><br>
-                
-                <h2 style="display: inline-block; margin-right: 10px;">■ 데이터 분석 준전문가</h2>
-                <p id="date_font" style="display: inline-block; margin: 0;">2023.03</p><br>
-                
-                <h2 style="display: inline-block; margin-right: 10px;">■ SQL 개발자</h2>
-                <p id="date_font" style="display: inline-block; margin: 0;">2023.04</p><br>
-                
-                <h2 style="display: inline-block; margin-right: 10px;">■ 컴퓨터 활용 능력 1급</h2>
-                <p id="date_font" style="display: inline-block; margin: 0;">2021.02</p><br>
-                
-            </section>
-            <br>
-            <hr>
+                <!-- 03. KT AIVLE SCHOOL / 사용자 제공 구성도 이미지 -->
+                <article class="work-item work-item--third" aria-labelledby="work-title-03">
+                    <div class="work-aside">
+                        <span class="work-number">03</span>
+                        <p class="work-period">2024.06 — 2024.08</p>
+                        <p class="work-category">DATA SCIENCE<br>APPLIED MACHINE LEARNING</p>
+                        <h3 id="work-title-03">식품사막 문제 해결을 위한<br>AI 웹 서비스</h3>
+                        <p class="work-description">
+                            신선식품 가격 데이터를 분석하고 GRU·SARIMA 기반 시계열 예측 모델을 구현했습니다.
+                            예측 결과를 Django 웹 서비스와 연결하고, 사용자 Q&amp;A 기능도 개발했습니다.
+                        </p>
+                        <dl class="work-facts">
+                            <div><dt>담당</dt><dd>데이터 모델링 / 웹 개발 / DB 설계 / RAG 환경 구축</dd></div>
+                            <div><dt>기술</dt><dd>Python, Machine Learning(GRU, SARIMA), Django, AWS, LLM(GPT-4)</dd></div>
+                            <div><dt>핵심</dt><dd>가격 예측 모델 · RAG 활용 LLM 서비스 개발 및 배포</dd></div>
+                        </dl>
+                        <div class="work-links">
+                            <a class="work-link" href="https://github.com/LeeYoonhyeok/ONSEMI" target="_blank" rel="noopener noreferrer">
+                                GitHub <span aria-hidden="true">↗</span>
+                            </a>
+                            <a class="work-link" href="[github pdf] kt-aivle school.pdf" target="_blank" rel="noopener noreferrer">
+                                상세 자료 <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </div>
 
-            <section id="contact">
-                <h1>Contact</h1>
-                <p>e-mail : yoonhyeok123@naver.com</p><br>
-                <p>phone number : 010-8462-7024</p>
-            </section>
+                    <div class="work-visual-wrap">
+                        <figure class="system-figure">
+                            <a
+                                class="system-figure__link"
+                                href="images/kt-aivle-ai-service-system.png"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="KT AIVLE SCHOOL 최종 프로젝트 시스템 구성도 원본 이미지 보기 (새 탭)"
+                            >
+                                <img
+                                    src="images/kt-aivle-ai-service-system.png"
+                                    alt="KT AIVLE SCHOOL 최종 프로젝트 시스템 구성도"
+                                    width="1111"
+                                    height="594"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </a>
+                            <figcaption class="system-figure__caption">
+                                <span>FIG. 3 / SYSTEM ARCHITECTURE</span>
+                                <span>이미지를 누르면 크게 볼 수 있습니다 ↗</span>
+                            </figcaption>
+                        </figure>
+                        <div class="work-result">
+                            <span class="result-label">KEY CONTRIBUTION</span>
+                            <p>시계열 데이터 분석과 예측 모델 구현 · 결과를 웹 서비스에서 활용하도록 연결</p>
+                        </div>
+                    </div>
+                </article>
 
-            <br><br><br><br><br><br>
-        </div>
-    </div>
+                <!-- 04. 축산 데이터 분석 공모전 / 이미지 원본을 그대로 첨부 -->
+                <article class="work-item work-item--fourth" aria-labelledby="work-title-04">
+                    <div class="work-aside">
+                        <span class="work-number">04</span>
+                        <p class="work-period">2022.10 — 2022.11</p>
+                        <p class="work-category">DATA ANALYSIS<br>APPLIED MACHINE LEARNING</p>
+                        <h3 id="work-title-04">축산 데이터 분석 및<br>예측 모델 구축</h3>
+                        <p class="work-description">
+                            축산물 유통·가격 데이터를 분석하고 가격 예측 모델을 구현했습니다.
+                            고객 인식 데이터에 군집 분석을 적용해 활용 방안을 제안한 공모전 팀 프로젝트입니다.
+                        </p>
+                        <dl class="work-facts">
+                            <div><dt>담당</dt><dd>데이터 수집·전처리 / 예측 및 군집 분석</dd></div>
+                            <div><dt>기술</dt><dd>Python, Machine Learning (Random Forest, K-means)</dd></div>
+                            <div><dt>핵심</dt><dd>유통·가격 분석 · 소비자 유형 군집화</dd></div>
+                        </dl>
+                        <a class="work-link" href="https://github.com/LeeYoonhyeok/umelona" target="_blank" rel="noopener noreferrer">
+                            GitHub 코드 보기 <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
 
+                    <div class="work-visual-wrap">
+                        <figure class="system-figure">
+                            <a
+                                class="system-figure__link"
+                                href="images/livestock-analysis-system.png"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="축산 데이터 분석 공모전 시스템 구성도 원본 이미지 보기 (새 탭)"
+                            >
+                                <img
+                                    src="images/livestock-analysis-system.png"
+                                    alt="축산 데이터 분석 공모전 시스템 구성도"
+                                    width="1167"
+                                    height="624"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </a>
+                            <figcaption class="system-figure__caption">
+                                <span>FIG. 4 / SYSTEM ARCHITECTURE</span>
+                                <span>이미지를 누르면 크게 볼 수 있습니다 ↗</span>
+                            </figcaption>
+                        </figure>
+                        <div class="work-result">
+                            <span class="result-label">KEY CONTRIBUTION</span>
+                            <p>공공 데이터 기반 가격 예측 · 고객 인식 데이터 군집 분석</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-    <script src="js/script.js"></script>
+        <!-- ABOUT: 성향을 추상적 슬로건 대신 실제로 일하는 방식으로 표현 -->
+        <section class="about-section" id="about" aria-labelledby="about-heading">
+            <div class="page-container">
+                <div class="section-intro">
+                    <div class="section-marker">
+                        <span class="section-index">02 / ABOUT</span>
+                    </div>
+                    <div class="section-intro-content">
+                        <h2 id="about-heading">About &amp; Experience<span class="title-dot">.</span></h2>
+                        <p>데이터를 분석하고 활용하는 과정에서 중요하게 생각하는 방식과 경험입니다.</p>
+                    </div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-label">
+                        <span class="mono overline">WORKING PRINCIPLES</span>
+                        <h3>데이터를 다루며<br>중요하게 생각하는 것</h3>
+                    </div>
+                    <div class="principle-list">
+                        <div class="principle">
+                            <span>01</span>
+                            <div>
+                                <h4>결과에 앞서 데이터를 충분히 살펴봅니다.</h4>
+                                <p>데이터의 분포와 품질을 확인하고, 분석에 영향을 주는 조건부터 점검합니다.</p>
+                            </div>
+                        </div>
+                        <div class="principle">
+                            <span>02</span>
+                            <div>
+                                <h4>문제는 원인을 찾을 때까지 확인합니다.</h4>
+                                <p>오류가 생기면 재실행만 하기보다 입력 데이터와 처리 과정을 비교해 원인을 추적합니다.</p>
+                            </div>
+                        </div>
+                        <div class="principle">
+                            <span>03</span>
+                            <div>
+                                <h4>분석 결과가 실제로 쓰이도록 연결합니다.</h4>
+                                <p>예측 결과를 서비스에 적용하고, 팀원이 함께 활용할 수 있도록 구현 내용과 변경 사항을 공유합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-grid">
+
+                    <div class="about-label">
+                        <span class="mono overline">EXPERIENCE</span>
+                        <h3>경력</h3>
+
+                        <p class="experience-total">
+                            총 경력 <strong id="experience-total">-</strong>
+                            <span>(인턴 포함)</span>
+                        </p>
+                    </div>
+                                        <div class="timeline">
+                                            <div class="timeline-entry">
+                    <span class="timeline-year">
+                        2025.02 — NOW
+                        <br>
+                        <span id="experience-current">-</span>
+                    </span>
+                            <div>
+                                <h4>로이드케이 <span>Data Engineer</span></h4>
+                                <p>데이터 수집·가공 파이프라인 구축, 검색 기능 개선, 시스템·서비스 데이터 모니터링</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <span class="timeline-year">
+                                2020.07 — 2020.08
+                                <br>
+                                <span id="experience-intern">-</span>
+                            </span>
+                            <div>
+                                <h4>모아플래닛 <span>Web Developer Intern</span></h4>
+                                <p>Spring·JavaScript 기반 웹 개발, 고객 요구사항 반영 및 개발 문서 작성</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-bottom-grid">
+                    <div class="detail-group">
+                        <span class="mono overline">STACK / PRACTICE</span>
+                        <h3>주요 기술</h3>
+                        <dl class="detail-list">
+                            <div><dt>주요 사용</dt><dd>Python, SQL / MySQL, Machine Learning, Linux, Elastic Stack</dd></div>
+                            <div><dt>분석·모델링</dt><dd>Pandas, 시계열 분석, GRU, SARIMA, Deep Learning, LLM</dd></div>
+                            <div><dt>서비스 경험</dt><dd>Django, JavaScript, MySQL, AWS, Celery, Redis</dd></div>
+                            <div><dt>학습·확장</dt><dd>Kafka, Docker, Git, Airflow, FastAPI, Spring</dd></div>
+                        </dl>
+                    </div>
+                    <div class="detail-group">
+                        <span class="mono overline">EDUCATION / CERTIFICATION</span>
+                        <h3>학력 및 자격</h3>
+                        <dl class="detail-list">
+                            <div><dt>2018.03 ~ 2024.02</dt><dd>경기대학교 컴퓨터공학 / 응용통계 졸업</dd></div>
+                            <div><dt>2024.02 ~ 2024.08</dt><dd>KT AIVLE SCHOOL 5기 수료</dd></div>
+                            <div><dt>2025.05</dt><dd>Elastic Certified Engineer</dd></div>
+                            <div><dt>2021 ~ 2023</dt><dd>정보처리기사 · 빅데이터분석기사 · ADsP · SQLD · 컴퓨터활용능력 1급</dd></div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="contact" aria-labelledby="contact-heading">
+            <div class="page-container">
+                <div class="footer-topline">
+                    <span class="section-index">03 / CONTACT</span>
+                    <span class="mono">OPEN TO CONVERSATION</span>
+                </div>
+                <div class="footer-grid">
+                    <div>
+                        <h2 id="contact-heading">Contact<span class="footer-dot">.</span></h2>
+                        <p>데이터 분석·엔지니어링 관련 업무와 채용 문의는 이메일로 연락해 주세요.</p>
+                    </div>
+                    
+
+                <div class="footer-contact">
+                    <!-- 이메일 복사 -->
+                    <button
+                        class="contact-copy"
+                        type="button"
+                        data-copy-text="yoonhyeok123@naver.com"
+                        data-copy-label="이메일"
+                        data-hint="클릭하여 복사"
+                    >
+                        yoonhyeok123@naver.com
+                        <span aria-hidden="true">⧉</span>
+                    </button>
+
+                    <!-- 전화번호 복사 -->
+                    <button
+                        class="contact-copy"
+                        type="button"
+                        data-copy-text="010-8462-7024"
+                        data-copy-label="전화번호"
+                        data-hint="클릭하여 복사"
+                    >
+                        010-8462-7024
+                        <span aria-hidden="true">⧉</span>
+                    </button>
+
+                    <span
+                        class="copy-feedback"
+                        role="status"
+                        aria-live="polite"
+                    ></span>
+                </div>
+
+                <div class="footer-bottom">
+                    <span>© <span id="current-year">2026</span> LEE YOONHYEOK</span>
+                    <div class="footer-links">
+                        <a href="https://github.com/LeeYoonhyeok" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        <a href="#top">Back to top ↑</a>
+                    </div>
+                    <span>BUILT FOR GITHUB PAGES</span>
+                </div>
+            </div>
+        </footer>
+    </main>
 </body>
 </html>
